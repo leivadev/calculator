@@ -10,7 +10,7 @@
     --blue-key-hover: hsl(225, 20%, 40%);
     --blue-key-active: hsl(225, 20%, 30%);
     --red-key-background: hsl(6, 69%, 55%);
-    --red-key-shadow: hsl(6, 69%, 50%);
+    --red-key-hover: hsl(6, 69%, 50%);
     --red-key-active: hsl(6, 69%, 40%);
     --white-key-background: hsl(25, 15%, 90%);
     --white-key-hover: hsl(25, 15%, 85%);
@@ -101,6 +101,30 @@ button {
     box-shadow: 0px -4px 0px 0px var(--blue-key-active) inset;
 }
 
+.btn:hover {
+    background-color: var(--white-key-hover);
+}
+
+.btn:active {
+    background-color: var(--white-key-active);
+}
+
+.btn-red:hover {
+    background-color: var(--red-key-hover);
+}
+
+.btn-red:active {
+    background-color: var(--red-key-active);
+}
+
+.btn-blue:hover {
+    background-color: var(--blue-key-hover);
+}
+
+.btn-blue:active {
+    background-color: var(--blue-key-active);
+}
+
 footer {
     margin: 40px auto;
     text-align: center;
@@ -114,4 +138,12 @@ footer a {
     background-color: var(--screen-background);
     padding: 4px;
     border-radius: 8px;
+}
+
+footer a:hover {
+    color: var(--white-key-hover);
+}
+
+footer a:active {
+    color: var(--white-key-active);
 }
