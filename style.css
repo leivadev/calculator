@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --background: hsl(222, 26%, 31%);
+    --keypad-background: hsl(223, 31%, 20%);
+    --screen-background: hsl(224, 36%, 15%);
+    --dark-font: hsl(221, 14%, 31%);
+    --white-font: hsl(0, 0%, 100%);
+    --blue-key-background: hsl(225, 20%, 55%);
+    --blue-key-hover: hsl(225, 20%, 40%);
+    --blue-key-active: hsl(225, 20%, 30%);
+    --red-key-background: hsl(6, 69%, 55%);
+    --red-key-shadow: hsl(6, 69%, 50%);
+    --red-key-active: hsl(6, 69%, 40%);
+    --white-key-background: hsl(25, 15%, 90%);
+    --white-key-hover: hsl(25, 15%, 85%);
+    --white-key-active: hsl(25, 15%, 75%);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    display: block;
+    background: var(--background);
+    font-family: 'Open Sans', sans-serif;
+
+}
