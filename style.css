@@ -101,6 +101,11 @@ button {
     box-shadow: 0px -4px 0px 0px var(--blue-key-active) inset;
 }
 
+.btn-blue,
+.btn-red {
+    flex-grow: 1;
+}
+
 .btn:hover {
     background-color: var(--white-key-hover);
 }
