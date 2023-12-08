@@ -36,16 +36,73 @@ body {
 
 }
 
-header {
-    text-align: center;
-    padding: 12px 0;
-    font-size: 24px;
-    color: var(--white-font);
+button {
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    outline: none;
+}
+
+.calculator {
+    width: 540px;
+    margin: 24px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: var(--keypad-background);
+}
+
+.screen {
+    padding: 10px 20px;
+    margin-bottom: 24px;
+    border-radius: 10px;
+    font-size: 48px;
     font-weight: 700;
+    text-align: right;
+    word-wrap: break-word;
+    word-break: break-all;
+    width: auto;
+    height: 128px;
+    background: var(--screen-background);
+    color: var(--white-font);
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px 32px;
+}
+
+.btn {
+    padding: 10px;
+    font-size: 18px;
+    width: 100px;
+    height: 64px;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--dark-font);
+    border-radius: 10px;
+    box-shadow: 0px -4px 0px 0px var(--white-key-active) inset;
+}
+
+.btn-red {
+    color: var(--white-font);
+    background-color: var(--red-key-background);
+    box-shadow: 0px -4px 0px 0px var(--red-key-active) inset;
+}
+
+.btn-blue {
+    color: var(--white-font);
+    background-color: var(--blue-key-background);
+    box-shadow: 0px -4px 0px 0px var(--blue-key-active) inset;
 }
 
 footer {
-    margin: 24px 0px;
+    margin: 40px auto;
     text-align: center;
     color: var(--white-font);
 }
