@@ -14,7 +14,7 @@ btnNumbers.forEach((button) =>
 )
 
 btnOperators.forEach((button) =>
-    button.addEventListener('click', () => setOperation(button.textContent))
+    button.addEventListener('click', () => appendOperator(button.textContent))
 )
 
 window.addEventListener('keydown', keyboardInput)
@@ -30,5 +30,22 @@ function keyboardInput(e) {
     if (e.key === 'Backspace') deleteNumber()
     if (e.key === 'Escape') clear()
     if (e.key === '+' || e.key === '-' || e.key === '*' || e.key === '/')
-        setOperation(convertOperator(e.key))
+        appendOperator(convertOperator(e.key))
+}
+
+function appendDot() {
+    if (screenInput.textContent === '') screenInput.textContent = '0';
+    if (screenInput.textContent.includes('.')) return screenInput.textContent += '.';
+}
+
+function removeElement() {
+    screenInput.textContent = screenInput.textContent.toString().slice(0, -1);
+}
+
+function clearScreen() {
+    screenInput.textContent = '0';
+}
+
+function appendNumber(number) {
+    screenInput.textContent += number;
 }
