@@ -22,3 +22,13 @@ btnDot.addEventListener('click', appendDot);
 btnClear.addEventListener('click', clearScreen);
 btnRemove.addEventListener('click', removeElement);
 btnCalculate.addEventListener('click', calculateOperation);
+
+function keyboardInput(e) {
+    if (e.key >= 0 && e.key <= 9) appendNumber(e.key)
+    if (e.key === '.') appendDot()
+    if (e.key === '=' || e.key === 'Enter') evaluate()
+    if (e.key === 'Backspace') deleteNumber()
+    if (e.key === 'Escape') clear()
+    if (e.key === '+' || e.key === '-' || e.key === '*' || e.key === '/')
+        setOperation(convertOperator(e.key))
+}
