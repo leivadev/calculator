@@ -40,7 +40,7 @@ function keyboardInput(e) {
 
 function appendDot() {
     if (screenInput.textContent === '') screenInput.textContent = '0';
-    if (!screenInput.textContent.includes('.')) return screenInput.textContent += '.';
+    if (!screenInput.textContent.includes('.')) screenInput.textContent += '.';
 }
 
 function removeNumber() {
@@ -48,6 +48,7 @@ function removeNumber() {
 }
 
 function clearScreen() {
+    currentOperator = null;
     screenInput.textContent = '0';
     screenHistory.textContent = '';
     firstOperand = '';
@@ -60,10 +61,10 @@ function appendNumber(number) {
 }
 
 function appendOperator(operator) {
-    if (currentOperator !== null) calculateOperation()
-    if (screenInput.textContent === '') return;
+    if (currentOperator !== null) calculateOperation();
     firstOperand = screenInput.textContent;
-    screenHistory.textContent = `${firstOperand}${operator}`;
+    currentOperator = operator;
+    screenHistory.textContent = `${firstOperand} ${currentOperator}`;
     screenInput.textContent = '';
 }
 
@@ -83,7 +84,7 @@ function operate(operator, x, y) {
         case '*':
             return multiply(x, y);
         case '/':
-            if (b === 0) return null;
+            if (y === 0) return null;
             return divide(x, y);
         default:
             return null;
@@ -91,5 +92,13 @@ function operate(operator, x, y) {
 }
 
 function calculateOperation() {
-
+    if (currentOperator === null) return;
+    if (currentOperator === '/' && screenInput.textContent === '0') {
+        screenInput.textContent = "You can't divide by zero 😐";
+        return;
+    }
+    secondOperand = screenInput.textContent;
+    screenInput.textContent = Math.round(operate(currentOperator, firstOperand, secondOperand) * 1000) / 1000;
+    screenHistory.textContent = `${firstOperand} ${currentOperator} ${secondOperand} =`;
+    currentOperator = null;
 }
