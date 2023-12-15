@@ -46,7 +46,7 @@ button {
 }
 
 .calculator {
-    width: 540px;
+    max-width: 540px;
     margin: 24px auto;
     padding: 20px;
     border-radius: 10px;
