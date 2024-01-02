@@ -143,24 +143,22 @@ button {
 }
 
 footer {
-    margin: 40px auto;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+footer a,
+footer p {
     color: var(--white-font);
 }
 
-footer a {
-    text-decoration: none;
-    color: var(--white-key-background);
-    font-weight: bold;
-    background-color: var(--screen-background);
-    padding: 4px;
-    border-radius: 8px;
+footer p {
+    font-size: 1.25rem;
+    font-weight: 600;
 }
 
-footer a:hover {
-    color: var(--white-key-hover);
-}
-
-footer a:active {
-    color: var(--white-key-active);
+footer i {
+    padding-right: 0.5rem;
 }
