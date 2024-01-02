@@ -31,17 +31,16 @@ html {
 
 body {
     display: flex;
-    height: 100vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
     font-family: 'Open Sans', sans-serif;
     background-image: url(img/background-pattern.svg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-
 }
 
 button {
