@@ -98,6 +98,7 @@ function calculateOperation() {
         return;
     }
     secondOperand = screenInput.textContent;
+    if (secondOperand === '') secondOperand = '0';
     screenInput.textContent = Math.round(operate(currentOperator, firstOperand, secondOperand) * 1000) / 1000;
     screenHistory.textContent = `${firstOperand} ${currentOperator} ${secondOperand} =`;
     currentOperator = null;
