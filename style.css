@@ -187,3 +187,7 @@ footer p {
 footer i {
     padding-right: 0.5rem;
 }
+
+footer a:hover {
+    text-decoration: none;
+}
