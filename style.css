@@ -58,7 +58,7 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 400px;
+    max-width: 23rem;
 
     padding-top: 0.5rem;
     padding-bottom: 0.25rem;
@@ -78,42 +78,42 @@ header button {
 }
 
 header button:hover {
-    border-width: 3px;
+    border-width: 0.15rem;
 }
 
 .calculator {
-    padding: 20px;
-    border-radius: 10px;
+    padding: 1rem;
+    border-radius: 0.5rem;
     background: var(--keypad-background);
 }
 
 .screen {
-    padding: 20px 20px;
-    margin-bottom: 24px;
-    border-radius: 10px;
+    padding: 1rem 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
     text-align: right;
     word-wrap: break-word;
     word-break: break-all;
-    height: 128px;
+    height: 8rem;
     background: var(--screen-background);
     color: var(--white-font);
 }
 
 #screen-input {
     min-height: auto;
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 700;
 }
 
 #screen-history {
     min-height: auto;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    gap: 0.75rem;
 }
 
 .btn-grow {
@@ -121,26 +121,26 @@ header button:hover {
 }
 
 .btn {
-    padding: 10px;
-    font-size: 18px;
-    font-size: 32px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-size: 2rem;
     font-weight: 700;
     text-align: center;
     color: var(--dark-font);
-    border-radius: 10px;
-    box-shadow: 0px -4px 0px 0px var(--white-key-active) inset;
+    border-radius: 0.5rem;
+    box-shadow: 0px -3px 0px 0px var(--white-key-active) inset;
 }
 
 .btn-red {
     color: var(--white-font);
     background-color: var(--red-key-background);
-    box-shadow: 0px -4px 0px 0px var(--red-key-active) inset;
+    box-shadow: 0px -3px 0px 0px var(--red-key-active) inset;
 }
 
 .btn-blue {
     color: var(--white-font);
     background-color: var(--blue-key-background);
-    box-shadow: 0px -4px 0px 0px var(--blue-key-active) inset;
+    box-shadow: 0px -3px 0px 0px var(--blue-key-active) inset;
 }
 
 .btn:hover {
@@ -171,7 +171,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1.5rem 0;
+    margin: 1.25rem 0;
 }
 
 footer a,
