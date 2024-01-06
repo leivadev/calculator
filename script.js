@@ -12,7 +12,7 @@ const screenInput = document.getElementById('screen-input');
 
 let firstOperand = '';
 let secondOperand = '';
-let currentOperator = '';
+let currentOperator = null;
 
 btnNumbers.forEach((button) =>
     button.addEventListener('click', () => appendNumber(button.textContent))
