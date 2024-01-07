@@ -5,6 +5,12 @@ const btnOperators = document.querySelectorAll('.btn-operator');
 const btnClear = document.getElementById('btnClear');
 const btnRemove = document.getElementById('btnRemove');
 const btnCalculate = document.getElementById('btnCalculate');
+
+const btnPlus = document.getElementById('btnPlus');
+const btnMinus = document.getElementById('btnMinus');
+const btnMultiply = document.getElementById('btnMultiply');
+const btnDivide = document.getElementById('btnDivide');
+
 const btnDot = document.getElementById('btnDot');
 const screenCalculator = document.getElementsByClassName('screen');
 const screenHistory = document.getElementById('screen-history');
@@ -77,13 +83,13 @@ function operate(operator, x, y) {
     x = Number(x);
     y = Number(y);
     switch (operator) {
-        case '+':
+        case btnPlus.textContent:
             return add(x, y);
-        case '-':
+        case btnMinus.textContent:
             return substract(x, y);
-        case '*':
+        case btnMultiply.textContent:
             return multiply(x, y);
-        case '/':
+        case btnDivide.textContent:
             if (y === 0) return null;
             return divide(x, y);
         default:
