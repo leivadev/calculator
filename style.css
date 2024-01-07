@@ -53,19 +53,17 @@ body {
     outline: none;
 }
 
-header {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 23rem;
 
-    padding-top: 0.5rem;
-    padding-bottom: 0.25rem;
+    padding-bottom: 0.5rem;
     color: var(--white-font);
 }
 
-header button {
+.header button {
     height: 2.5rem;
     width: 2.5rem;
     padding: 0.5rem;
@@ -77,7 +75,7 @@ header button {
     color: var(--white-font);
 }
 
-header button:hover {
+.header button:hover {
     border-width: 0.15rem;
 }
 
@@ -121,8 +119,7 @@ header button:hover {
 }
 
 .btn {
-    padding: 0.5rem;
-    font-size: 1rem;
+    padding: 0.5rem 2rem;
     font-size: 2rem;
     font-weight: 700;
     text-align: center;
