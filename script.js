@@ -65,7 +65,7 @@ function clearScreen() {
 
 function appendNumber(number) {
     if (screenInput.textContent === '0') screenInput.textContent = '';
-    screenInput.textContent += number;
+    if (screenInput.textContent.length < 12) screenInput.textContent += number;
 }
 
 function appendOperator(operator) {
