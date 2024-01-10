@@ -82,6 +82,7 @@ body {
     padding: 1rem;
     border-radius: 0.5rem;
     background: var(--keypad-background);
+    border: 0.25rem solid var(--screen-background);
 }
 
 .screen {
