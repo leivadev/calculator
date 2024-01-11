@@ -21,6 +21,7 @@ const screenInput = document.getElementById('screen-input');
 let firstOperand = '';
 let secondOperand = '';
 let currentOperator = null;
+let resetScreen = false;
 
 btnNumbers.forEach((button) =>
     button.addEventListener('click', () => appendNumber(button.textContent))
@@ -64,12 +65,17 @@ function clearScreen() {
 }
 
 function appendNumber(number) {
+    if (resetScreen) {
+        clearScreen();
+        resetScreen = false;
+    }
     if (screenInput.textContent === '0') screenInput.textContent = '';
     if (screenInput.textContent.length < 12) screenInput.textContent += number;
 }
 
 function appendOperator(operator) {
     if (currentOperator !== null) calculateOperation();
+    resetScreen = false;
     firstOperand = screenInput.textContent;
     currentOperator = operator;
     screenHistory.textContent = `${firstOperand} ${currentOperator}`;
@@ -110,6 +116,7 @@ function calculateOperation() {
     screenInput.textContent = Math.round(operate(currentOperator, firstOperand, secondOperand) * 1000) / 1000;
     screenHistory.textContent = `${firstOperand} ${currentOperator} ${secondOperand} =`;
     currentOperator = null;
+    resetScreen = true;
 }
 
 //theme mode toggle functionality
