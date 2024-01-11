@@ -101,7 +101,7 @@ function operate(operator, x, y) {
 
 function calculateOperation() {
     if (currentOperator === null) return;
-    if (currentOperator === '/' && screenInput.textContent === '0') {
+    if (currentOperator === btnDivide.textContent && screenInput.textContent === '0') {
         screenInput.textContent = "You can't divide by zero 😐";
         return;
     }
